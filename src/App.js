@@ -1,7 +1,16 @@
+import { Routes, Route } from 'react-router-dom';
+import NavBar from './Components/NavBar';
+import Home from './Components/Pages/Home';
+import Details from './Components/Pages/Details';
+
 function App() {
   return (
     <div className="App">
-      <h1>kamzzyFinancials</h1>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="details" element={<Details />} />
+      </Routes>
     </div>
   );
 }
