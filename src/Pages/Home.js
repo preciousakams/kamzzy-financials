@@ -1,22 +1,25 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { displayStatement } from '../redux/financialStatements/finStatements';
+import { displayStock, stockDetails } from '../redux/financialStatements/finStatements';
 
 const Home = () => {
-  const statements = useSelector((state) => state.statements);
+  const stocks = useSelector((state) => state.stocks);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(displayStatement());
+    dispatch(displayStock());
   }, []);
+
+  const stockClicked = (stock) => {
+    dispatch(stockDetails(stock));
+  };
 
   return (
     <>
-      <div><h3>All Financial Statements</h3></div>
+      <div><h3>All Tradeable Stocks</h3></div>
       <div className="row justify-content-center">
-        {statements.map((statement, index) => (
-        // eslint-disable-next-line react/no-array-index-key
-          <div className="col-sm-4 colDiv" key={index}>
-            <button type="button">{statement}</button>
+        {stocks.map((stock) => (
+          <div className="col-sm-4 colDiv" key={stock.symbol}>
+            <button type="button" onClick={() => stockClicked(stock)}>{stock.name}</button>
           </div>
         ))}
       </div>

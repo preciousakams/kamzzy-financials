@@ -1,13 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-import statementReducer from './financialStatements/finStatements';
+import stockReducer from './financialStatements/finStatements';
 
 const composeEnhancers = compose;
 
 const store = configureStore({
   reducer: {
-    statements: statementReducer,
+    stocks: stockReducer,
   },
 });
 composeEnhancers(applyMiddleware(thunk));
