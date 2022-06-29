@@ -1,54 +1,90 @@
-// import React, { useEffect } from 'react';
-// import { useSelector, useDispatch } from 'react-redux';
-// import { statementDetails } from '../redux/financialStatements/finStatements';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { stockDetails } from '../redux/financialStatements/finStatements';
 
-// const Details = () => {
-//   const details = useSelector((state) => state.details);
-//   const dispatch = useDispatch();
-//   useEffect(() => {
-//     dispatch(statementDetails());
-//   }, []);
+const Details = () => {
+  const stocks = useSelector((state) => state.stocks);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(stockDetails());
+  }, []);
 
-//   return (
-//     <div className="detailsDiv">
-//       {details.map((detail) => (
-//         <>
-//           <div key={detail.date}>
-//             <h1>{detail.symbol}</h1>
-//             <p>
-//               Revenue:
-//               {' '}
-//               {detail.revenue}
-//               <span>
-//                 Cost of Revenue
-//                 {' '}
-//                 {detail.costOfRevenue}
-//               </span>
-//             </p>
-//             <span>
-//               Filling date:
-//               {' '}
-//               {detail.fillingDate}
-//             </span>
-//           </div>
-//           <ul className="detailsList">
-//             <li className="detailItem">
-//               <span>
-//                 Gross Profit:
-//                 {' '}
-//                 {detail.grossProfit}
-//               </span>
-//               <span>
-//                 NetIncome:
-//                 {' '}
-//                 {detail.netIncome}
-//               </span>
-//             </li>
-//           </ul>
-//         </>
-//       ))}
-//     </div>
-//   );
-// };
+  return (
+    <div className="detailsDiv">
+      <div className="detailHeader" key={stocks.symbol}>
+        <h1>{stocks.symbol}</h1>
+        <h4>
+          Price Change:
+          {' '}
+          {stocks.priceChangePercent}
+          %
+        </h4>
+      </div>
+      <div className="detailsList">
+        <h5>
+          Volume:
+          {' '}
+          {stocks.volume}
+          <span>
+            Quote Volume:
+            {' '}
+            {stocks.quoteVolume}
+          </span>
+        </h5>
+        <h5>
+          Last Price:
+          {' '}
+          {stocks.lastPrice}
+          <span>
+            {' '}
+            Last Qty:
+            {stocks.lastQty}
 
-// export default Details;
+          </span>
+        </h5>
+        <h5>
+          Bid Price:
+          {' '}
+          {stocks.bidPrice}
+          <span>
+            Bid Qty:
+            {' '}
+            {stocks.bidQty}
+          </span>
+        </h5>
+        <h5>
+          AskPrice:
+          {' '}
+          {stocks.askPrice}
+          <span>
+            Ask Qty:
+            {' '}
+            {stocks.askQty}
+          </span>
+        </h5>
+        <h5 className="price">
+          <span>
+            {' '}
+            Opening Price:
+            {' '}
+            {stocks.openPrice}
+          </span>
+          <span>
+            {' '}
+            High Price:
+            {' '}
+            {stocks.highPrice}
+          </span>
+          <span>
+            {' '}
+            Low Price:
+            {' '}
+            {stocks.lowPrice}
+          </span>
+        </h5>
+      </div>
+    </div>
+  );
+};
+
+export default Details;

@@ -1,15 +1,16 @@
 import axios from 'axios';
 
-const baseUrl = 'https://financialmodelingprep.com/api/v3/available-traded/list?apikey=542903edab327097eef6752b9224f360';
+const baseUrl = 'https://api.binance.com/api/v3/ticker/24hr';
 const DISPLAY_STOCKS = 'DISPLAY_STOCKS';
 const STOCK_DETAILS = 'STOCK_DETAILS';
+
 const initialState = [];
 
 export const displayStock = () => async (dispatch) => {
   const response = await axios.get(baseUrl);
   dispatch({
     type: DISPLAY_STOCKS,
-    payload: response.data.slice(1, 50),
+    payload: response.data.slice(0, 52),
   });
 };
 
@@ -24,8 +25,8 @@ const stockReducer = (state = initialState, action) => {
   switch (action.type) {
     case DISPLAY_STOCKS:
       return action.payload;
-    // case DISPLAY_DETAILS:
-    //   return action.payload;
+    case STOCK_DETAILS:
+      return action.payload;
     default:
       return state;
   }
