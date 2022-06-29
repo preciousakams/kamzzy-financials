@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { MdOutlineArrowBackIosNew } from 'react-icons/md';
+import { NavLink } from 'react-router-dom';
 import { stockDetails } from '../redux/financialStatements/finStatements';
 
 const Details = () => {
@@ -11,6 +13,7 @@ const Details = () => {
 
   return (
     <div className="detailsDiv">
+      <NavLink to="/"><MdOutlineArrowBackIosNew /></NavLink>
       <div className="detailHeader" key={stocks.symbol}>
         <h1>{stocks.symbol}</h1>
         <h4>
