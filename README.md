@@ -1,5 +1,5 @@
 # Kamzzy Financials
-### An app.
+### A cryptocurrency trading application for 24hrs trading data
 ***
 ## Deployed versions
 * [Deployed Version]()
