@@ -1,7 +1,7 @@
 # Kamzzy Financials
 ### A cryptocurrency trading application for 24hrs trading data
 ***
-### [Deployed Version]()
+### [Deployed Version](https://fanciful-narwhal-8a6cee.netlify.app/)
 ### [Demo Video](https://www.loom.com/share/fb79ff1b3e1b4a7a9cc10eb9b024c56b)
  ***
 ## Built With
