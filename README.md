@@ -2,8 +2,8 @@
 ### An app.
 ***
 ## Deployed versions
-* [Heroku]()
-* [Netlify]()
+* [Deployed Version]()
+* [Demo Video](https://www.loom.com/share/fb79ff1b3e1b4a7a9cc10eb9b024c56b)
  ***
 ## Built With
 * React

@@ -15,10 +15,15 @@ export const displayStock = () => async (dispatch) => {
 };
 
 export const stockDetails = (stock) => async (dispatch) => {
-  dispatch({
-    type: STOCK_DETAILS,
-    payload: stock,
-  });
+  try {
+    dispatch({
+      type: STOCK_DETAILS,
+      payload: stock,
+    });
+  } catch (err) {
+    return err;
+  }
+  return null;
 };
 
 const stockReducer = (state = initialState, action) => {

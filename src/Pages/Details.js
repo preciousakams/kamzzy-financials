@@ -1,19 +1,20 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { MdOutlineArrowBackIosNew } from 'react-icons/md';
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { stockDetails } from '../redux/financialStatements/finStatements';
 
 const Details = () => {
   const stocks = useSelector((state) => state.stocks);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   useEffect(() => {
     dispatch(stockDetails());
   }, []);
 
   return (
     <div className="detailsDiv">
-      <NavLink to="/"><MdOutlineArrowBackIosNew /></NavLink>
+      <button aria-label="return button" type="button" onClick={() => navigate('/')}><MdOutlineArrowBackIosNew /></button>
       <div className="detailHeader" key={stocks.symbol}>
         <h1>{stocks.symbol}</h1>
         <h4>

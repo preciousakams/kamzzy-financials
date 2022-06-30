@@ -62,7 +62,9 @@
   justify-content: space-between;
 }
 
-.detailsDiv a {
+.detailsDiv button {
   color: #fff;
   margin-bottom: 48px;
+  background-color: transparent;
+  border: none;
 }
