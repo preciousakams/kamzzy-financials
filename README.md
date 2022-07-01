@@ -1,9 +1,8 @@
 # Kamzzy Financials
-### An app.
+### A cryptocurrency trading application for 24hrs trading data
 ***
-## Deployed versions
-* [Deployed Version]()
-* [Demo Video](https://www.loom.com/share/fb79ff1b3e1b4a7a9cc10eb9b024c56b)
+### [Deployed Version](https://whimsical-mousse-f75b49.netlify.app/)
+### [Demo Video](https://www.loom.com/share/fb79ff1b3e1b4a7a9cc10eb9b024c56b)
  ***
 ## Built With
 * React
@@ -31,7 +30,7 @@ From the cloned project directory
 ### 🤝 Contributing
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the issues page.
+Feel free to check the [issues page](../../issues/).
 
 Show your support
 Give a ⭐️ if you like this project!
@@ -40,3 +39,7 @@ Give a ⭐️ if you like this project!
 * Microverse
 
  Original design idea by Nelson Sakwa on [Behance.](https://www.behance.net/sakwadesignstudio)
+ ***
+ ## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
