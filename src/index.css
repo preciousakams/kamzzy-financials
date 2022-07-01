@@ -68,3 +68,28 @@
   background-color: transparent;
   border: none;
 }
+
+.search input {
+  width: 90%;
+  height: 78px;
+  border-radius: 32px;
+  font-size: 28px;
+  text-align: center;
+  border: solid 15px rgb(40, 115, 172);
+}
+
+.search input::placeholder {
+  font-size: 28px;
+  text-align: center;
+}
+
+.hi-icon {
+  font-size: 64px;
+  color: #fff;
+}
+
+.headerDiv h3 {
+  text-align: center;
+  margin: 24px 0;
+  font-size: 46px;
+}

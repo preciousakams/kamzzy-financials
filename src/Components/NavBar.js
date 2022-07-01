@@ -6,7 +6,7 @@ const NavBar = () => (
   <div>
     <ul className="navList">
       <li><BsMic /></li>
-      <li><IoIosSettings /></li>
+      <li><IoIosSettings aria-label="setting" /></li>
     </ul>
   </div>
 );

@@ -11,10 +11,22 @@ const Details = () => {
   useEffect(() => {
     dispatch(stockDetails());
   }, []);
-
+  const stockClicked = () => {
+    dispatch(window.location.reload());
+  };
   return (
     <div className="detailsDiv">
-      <button aria-label="return button" type="button" onClick={() => navigate('/')}><MdOutlineArrowBackIosNew /></button>
+      <button
+        aria-label="return button"
+        type="button"
+        onClick={() => {
+          navigate('/');
+          stockClicked();
+        }}
+      >
+        <MdOutlineArrowBackIosNew />
+
+      </button>
       <div className="detailHeader" key={stocks.symbol}>
         <h1>{stocks.symbol}</h1>
         <h4>
