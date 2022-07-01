@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const baseUrl = 'https://api.binance.com/api/v3/ticker/24hr';
-const DISPLAY_STOCKS = 'DISPLAY_STOCKS';
-const STOCK_DETAILS = 'STOCK_DETAILS';
+const DISPLAY_STOCKS = 'financialStatement/finStatement/DISPLAY_STOCKS';
+const STOCK_DETAILS = 'financialStatement/finStatement/STOCK_DETAILS';
 
 const initialState = [];
 
