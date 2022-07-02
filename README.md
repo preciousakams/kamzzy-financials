@@ -1,5 +1,5 @@
 # Kamzzy Financials
-### A cryptocurrency trading application for 24hrs trading data
+> A cryptocurrency trading application that allows you to access trading data within a 24-hour period.
 ***
 ### [Deployed Version](https://whimsical-mousse-f75b49.netlify.app/)
 ### [Demo Video](https://www.loom.com/share/fb79ff1b3e1b4a7a9cc10eb9b024c56b)
