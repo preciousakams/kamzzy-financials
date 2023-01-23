@@ -5,8 +5,12 @@ import { displayStock, stockDetails } from '../redux/financialStatements/finStat
 
 const Home = () => {
   const stocks = useSelector((state) => state.stocks);
+  const [searchInput, setSearchInput] = useState('');
+  const [filteredResults, setFilteredResults] = useState([]);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   useEffect(() => {
     dispatch(displayStock());
   }, []);
@@ -14,8 +18,6 @@ const Home = () => {
   const stockClicked = (stock) => {
     dispatch(stockDetails(stock));
   };
-  const [searchInput, setSearchInput] = useState('');
-  const [filteredResults, setFilteredResults] = useState([]);
 
   const searchItems = (searchValue) => {
     setSearchInput(searchValue);
